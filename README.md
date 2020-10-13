@@ -1,2 +1,2 @@
 # icinga2
-Add SSH client to official icinga2 core docker
+Add SSH client and python 3.7 to official icinga2 core docker
