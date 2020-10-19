@@ -23,6 +23,9 @@ RUN apt-get install -y \
 		python3.7 openssh-client &&\
 	apt-get clean && \
 	rm -vrf /var/lib/apt/lists/*
+WORKDIR /usr/bin
+RUN ln -s python3.7 python3 && \
+        ln -s python3.7 python
 COPY --from=0 /build/sipp /bin
 
 USER icinga
