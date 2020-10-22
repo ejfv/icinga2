@@ -1,2 +1,2 @@
 # icinga2
-Add SSH client, sipp, and python 3.7 to official icinga2 core docker
+Add SSH client, sipp, python 3.7 and impacket module to official icinga2 core docker

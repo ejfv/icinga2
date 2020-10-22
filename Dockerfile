@@ -20,13 +20,16 @@ FROM icinga/icinga2
 USER root
 RUN apt-get update 
 RUN apt-get install -y \
-		python3.7 openssh-client &&\
+		python3.7 python3-pip openssh-client &&\
 	apt-get clean && \
 	rm -vrf /var/lib/apt/lists/*
+RUN pip3 install impacket
 WORKDIR /usr/bin
 RUN ln -s python3.7 python3 && \
         ln -s python3.7 python
+
 COPY --from=0 /build/sipp /bin
 
+WORKDIR /var/lib/icinga2
 USER icinga
 
