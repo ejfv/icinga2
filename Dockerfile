@@ -23,7 +23,7 @@ RUN apt-get install -y \
 		python3.7 python3-pip openssh-client ldap-utils &&\
 	apt-get clean && \
 	rm -vrf /var/lib/apt/lists/*
-RUN pip3 install impacket
+RUN pip3 install pywinrm
 
 COPY --from=0 /build/sipp /bin
 
