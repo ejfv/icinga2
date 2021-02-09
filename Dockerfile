@@ -1,4 +1,4 @@
-FROM icinga/icinga2
+FROM ejflores/icinga2core
 
 USER root
 RUN apt-get update 
